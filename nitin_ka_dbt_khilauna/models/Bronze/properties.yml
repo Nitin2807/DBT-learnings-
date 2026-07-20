@@ -6,3 +6,24 @@ models:
     - name: bronze_product
       config:
         materialized: view
+
+    - name: bronze_store
+      columns:
+        - name: country
+          data_tests:
+            - accepted_values:
+                arguments:
+                  values: ['USA','Canada']
+                config:
+                  severity: warn
+
+    - name: bronze_sales
+      columns: 
+        - name: sales_id
+          data_tests: 
+            - not_null
+            - unique
+        - name: store_sk
+          data_tests: 
+            - not_null
+
