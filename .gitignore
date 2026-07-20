@@ -8,4 +8,13 @@ wheels/
 
 # Virtual environments
 .venv
-.yml
+
+# Local DBT credentials and generated artifacts
+nitin_ka_dbt_khilauna/profiles.yml
+nitin_ka_dbt_khilauna/.user.yml
+logs/
+**/target/
+**/dbt_packages/
+
+# Editor-local settings
+.vscode/
