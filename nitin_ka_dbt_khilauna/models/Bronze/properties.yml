@@ -26,4 +26,6 @@ models:
         - name: store_sk
           data_tests: 
             - not_null
-
+        - name: gross_amount
+          data_tests:
+            - generic_non_neg
